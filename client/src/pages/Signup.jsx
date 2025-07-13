@@ -1,20 +1,32 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 
+
 function Signup() {
+
+    const navigate = useNavigate();
+
     const[name, setName] = useState()
     const[email, setEmail] = useState()
     const[password, setPassword] = useState("")
 
     const handleSubmit = (e) => {
-e.preventDefault()
-axios.post('http://localhost:3001/register', {name,email,password})
-.then(result=> console.log(result))
-.catch(err => console.log(err))
+  e.preventDefault();
 
-    }
+  axios.post('http://localhost:5000/api/users/register', { name, email, password })
+    .then(result => {
+      console.log(result.data);
+      //Redirect to login page
+      navigate('/login');
+    })
+    .catch(err => {
+      console.log(err);
+      alert("Signup failed. Try again.");
+    });
+};
+
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
