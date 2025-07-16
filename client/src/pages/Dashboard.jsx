@@ -24,7 +24,7 @@ const Dashboard = () => {
     {
       id: 1,
       name: 'Ilam',
-      // Publicly accessible image from Wikimedia Commons
+     
       image: '/images/ilam.jpg',
 
       description: 'Famous for tea gardens and natural beauty',
@@ -34,7 +34,7 @@ const Dashboard = () => {
     {
       id: 2,
       name: 'Janakpur',
-      // Publicly accessible image from Wikimedia Commons (Janaki Mandir)
+      
       image: '/images/janakpur.jpg' ,
       description: 'Historic city with rich cultural heritage',
       rating: 4.6,
@@ -43,7 +43,7 @@ const Dashboard = () => {
     {
       id: 3,
       name: 'Everest Base Camp',
-      // Publicly accessible image from Wikimedia Commons
+      
       image: '/images/Everest-Base-Camp-.webp',
       description: 'Ultimate trekking destination',
       rating: 4.9,
@@ -52,7 +52,7 @@ const Dashboard = () => {
     {
       id: 4,
       name: 'Langtang',
-      // Publicly accessible image from Wikimedia Commons (Langtang Valley)
+      
       image: '/images/lantang.jpg',
       description: 'Beautiful valley trek with mountain views',
       rating: 4.7,
@@ -61,8 +61,8 @@ const Dashboard = () => {
     {
       id: 5,
       name: 'Pokhara',
-      // Publicly accessible image from Wikimedia Commons (Phewa Lake)
-      image: '/images/pokhara.webp',
+      
+      image: '/images/Pokhara.avif',
       description: 'Lake city with stunning mountain backdrop',
       rating: 4.8,
       travelers: 287
@@ -70,20 +70,123 @@ const Dashboard = () => {
     {
       id: 6,
       name: 'Chitwan National Park',
-      // Publicly accessible image from Wikimedia Commons (Rhino in Chitwan)
+     
       image: '/images/chitwan.jpg',
       description: 'National park with wildlife safari',
       rating: 4.5,
       travelers: 178
-    }
+    },
+    {
+      id: 7,
+      name: 'Kori Hill Trek',
+      image: '/images/koir.webp',
+      description: 'Scenic trek through lush hills and villages',
+      rating: 4.7,
+      travellers: 120
+    },
+    {
+      id: 8,
+      name: 'Annapurna Base Camp',
+      image: '/images/Annapurna Base Camp.jpg',
+      description: 'Majestic mountain view during the annapurna base camp trek',
+      rating: 4.9,
+      travellers: 100
+    },
+     {
+      id: 9,
+      name: 'Badimalika',
+      image: '/images/Badimalika.jpg',
+      description: 'spectacular views of the Badimalika temple and surrounding hills',
+      rating: 4.0,
+      travellers: 50
+    },
+    {
+      id: 10,
+      name: 'Lumbini',
+      image: '/images/Lumbini.jpg',
+      description: 'Birthplace of Lord Buddha, a UNESCO World Heritage Site',
+      rating: 4.0,
+      travellers: 200
+    },
+    {
+      id: 11,
+      name: 'Api Base Camp',
+      image: '/images/Api Base Camp.jpeg',
+      description: 'Remote trek to the base of Api Himal, the highest peak in the Api Nampa Conservation Area',
+      rating: 4.4,
+      travellers: 195
+    },
+     {
+      id: 12,
+      name: 'Mardi Himal',
+      image: '/images/Mardi Himal.webp',
+      description: 'A lesser-known trek offering stunning views of the Annapurna range',
+      rating: 4.1,
+      travellers: 150
+    },
+     {
+      id: 13,
+      name: 'Manung Kot',
+      image: '/images/Manung Kot.jpeg',
+      description: 'A scenic hilltop offering panoramic views of the surrounding valleys and mountains',
+      rating: 4.5,
+      travellers: 300
+    },
+     {
+      id: 14,
+      name: 'Upper Mustang',
+      image: '/images/Upper Mustang.webp',
+      description: 'A remote and culturally rich region with unique Tibetan Buddhist heritage',
+      rating: 4.5,
+      travellers: 300
+    },
+     {
+      id: 15,
+      name: 'Namche Bazaar',
+      image: '/images/Namche',
+      description: 'Gateway to the Everest region, known for its vibrant Sherpa culture and stunning mountain views',
+      rating: 4.5,
+      travellers: 300
+    },
   ];
 
-  const nearbyTravelers = [
-    { id: 1, name: 'Rajesh Kumar', location: 'Kathmandu', interests: ['Trekking', 'Photography'], avatar: 'RK' },
-    { id: 2, name: 'Priya Sharma', location: 'Pokhara', interests: ['Adventure', 'Culture'], avatar: 'PS' },
-    { id: 3, name: 'Amit Thapa', location: 'Lalitpur', interests: ['Hiking', 'Food'], avatar: 'AT' },
-    { id: 4, name: 'Sita Rai', location: 'Bhaktapur', interests: ['History', 'Art'], avatar: 'SR' }
-  ];
+ const nearbyTravelers = [
+  {
+    id: 1,
+    name: 'Rajesh Kumar',
+    location: 'Kathmandu',
+    interests: ['Trekking', 'Photography', 'Local Cuisine'],
+    bio: 'Adventure lover exploring the hills of Nepal.'
+  },
+  {
+    id: 2,
+    name: 'Priya Sharma',
+    location: 'Pokhara',
+    interests: ['Paragliding', 'Culture', 'Lakeside Chill'],
+    bio: 'Nature enthusiast, loves lakes and local culture.'
+  },
+  {
+    id: 3,
+    name: 'Amit Thapa',
+    location: 'Lalitpur',
+    interests: ['Hiking', 'Street Food', 'Temples'],
+    bio: 'Wandering soul discovering heritage sites.'
+  },
+  {
+    id: 4,
+    name: 'Sita Rai',
+    location: 'Bhaktapur',
+    interests: ['History', 'Art', 'Traditional Crafts'],
+    bio: 'Passionate about Newari art and history.'
+  },
+  {
+    id: 5,
+    name: 'Bikash Shrestha',
+    location: 'Dharan',
+    interests: ['Camping', 'Wildlife', 'Music'],
+    bio: 'Backpacker who loves forests and folk music.'
+  }
+];
 
   const blogPosts = [
     {
