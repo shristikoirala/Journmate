@@ -143,7 +143,7 @@ const Dashboard = () => {
      {
       id: 15,
       name: 'Namche Bazaar',
-      image: '/images/Namche',
+      image: '/images/Namche Bazaar.jpg',
       description: 'Gateway to the Everest region, known for its vibrant Sherpa culture and stunning mountain views',
       rating: 4.5,
       travellers: 300
@@ -188,35 +188,7 @@ const Dashboard = () => {
   }
 ];
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'Top 10 Trekking Routes in Nepal',
-      author: 'Travel Expert',
-      date: '2025-06-20',
-      // Publicly accessible image for trekking in Nepal
-      image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80',
-      excerpt: 'Discover the most breathtaking trekking routes Nepal has to offer...'
-    },
-    {
-      id: 2,
-      title: 'Cultural Festivals You Must Experience',
-      author: 'Culture Enthusiast',
-      date: '2025-06-18',
-      // Publicly accessible image for Nepalese cultural festival
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Indra_Jatra_Festival_in_Kathmandu.jpg/1280px-Indra_Jatra_Festival_in_Kathmandu.jpg',
-      excerpt: 'Immerse yourself in Nepal\'s rich cultural heritage through these festivals...'
-    },
-    {
-      id: 3,
-      title: 'Solo Travel Safety Tips',
-      author: 'Safety Guide',
-      date: '2025-06-15',
-      // Publicly accessible image for solo travel/safety (general travel image)
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80',
-      excerpt: 'Essential safety tips for solo travelers exploring Nepal...'
-    }
-  ];
+  
 
   const menuItems = [
     { id: 'home', label: 'Home', icon: Home },
@@ -336,30 +308,7 @@ const Dashboard = () => {
     </div>
   );
 
-  const renderBlog = () => (
-    <div className="space-y-6">
-      <h2 className="text-3xl font-bold text-gray-800">Travel Blog</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blogPosts.map(post => (
-          <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-            <img 
-              src={post.image} 
-              alt={post.title}
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-2">{post.title}</h3>
-              <p className="text-gray-600 text-sm mb-2">By {post.author} • {post.date}</p>
-              <p className="text-gray-700 text-sm mb-4">{post.excerpt}</p>
-              <button className="text-blue-500 hover:text-blue-600 font-medium text-sm flex items-center">
-                Read More <ArrowRight className="w-4 h-4 ml-1" />
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+ 
 
   const renderContact = () => (
     <div className="space-y-6">
@@ -485,7 +434,7 @@ const Dashboard = () => {
       case 'destinations': return renderDestinations();
       case 'bookings': return renderBookings();
       case 'travelers': return renderTravelers();
-      case 'blog': return renderBlog();
+     
       case 'contact': return renderContact();
       case 'login': return renderLogin();
       case 'signup': return renderSignup();
