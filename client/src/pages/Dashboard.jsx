@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import DashboardWelcome from '../components/DashboardWelcome';
 import { 
-  Home, 
+   
   MapPin, 
   Calendar, 
   Users, 
@@ -17,6 +18,7 @@ import {
 } from 'lucide-react';
 
 const Dashboard = () => {
+  
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -44,7 +46,7 @@ const Dashboard = () => {
       id: 3,
       name: 'Everest Base Camp',
       
-      image: '/images/Everest-Base-Camp-.webp',
+      image: '/images/everest base camp.webp',
       description: 'Ultimate trekking destination',
       rating: 4.9,
       travelers: 89
@@ -79,18 +81,18 @@ const Dashboard = () => {
     {
       id: 7,
       name: 'Kori Hill Trek',
-      image: '/images/koir.webp',
+      image: '/images/kori.webp',
       description: 'Scenic trek through lush hills and villages',
       rating: 4.7,
-      travellers: 120
+      travelers: 120
     },
     {
       id: 8,
       name: 'Annapurna Base Camp',
-      image: '/images/Annapurna Base Camp.jpg',
+      image: '/images/annapurna base camp.jpg',
       description: 'Majestic mountain view during the annapurna base camp trek',
       rating: 4.9,
-      travellers: 100
+      travelers: 100
     },
      {
       id: 9,
@@ -98,7 +100,7 @@ const Dashboard = () => {
       image: '/images/Badimalika.jpg',
       description: 'spectacular views of the Badimalika temple and surrounding hills',
       rating: 4.0,
-      travellers: 50
+      travelers: 50
     },
     {
       id: 10,
@@ -106,7 +108,7 @@ const Dashboard = () => {
       image: '/images/Lumbini.jpg',
       description: 'Birthplace of Lord Buddha, a UNESCO World Heritage Site',
       rating: 4.0,
-      travellers: 200
+      travelers: 200
     },
     {
       id: 11,
@@ -114,7 +116,7 @@ const Dashboard = () => {
       image: '/images/Api Base Camp.jpeg',
       description: 'Remote trek to the base of Api Himal, the highest peak in the Api Nampa Conservation Area',
       rating: 4.4,
-      travellers: 195
+      travelers: 195
     },
      {
       id: 12,
@@ -122,7 +124,7 @@ const Dashboard = () => {
       image: '/images/Mardi Himal.webp',
       description: 'A lesser-known trek offering stunning views of the Annapurna range',
       rating: 4.1,
-      travellers: 150
+      travelers: 150
     },
      {
       id: 13,
@@ -130,7 +132,7 @@ const Dashboard = () => {
       image: '/images/Manung Kot.jpeg',
       description: 'A scenic hilltop offering panoramic views of the surrounding valleys and mountains',
       rating: 4.5,
-      travellers: 300
+      travelers: 300
     },
      {
       id: 14,
@@ -138,7 +140,7 @@ const Dashboard = () => {
       image: '/images/Upper Mustang.webp',
       description: 'A remote and culturally rich region with unique Tibetan Buddhist heritage',
       rating: 4.5,
-      travellers: 300
+      travelers: 300
     },
      {
       id: 15,
@@ -146,7 +148,7 @@ const Dashboard = () => {
       image: '/images/Namche Bazaar.jpg',
       description: 'Gateway to the Everest region, known for its vibrant Sherpa culture and stunning mountain views',
       rating: 4.5,
-      travellers: 300
+      travelers: 300
     },
   ];
 
@@ -191,76 +193,49 @@ const Dashboard = () => {
   
 
   const menuItems = [
-    { id: 'home', label: 'Home', icon: Home },
+   
     { id: 'destinations', label: 'Destinations', icon: MapPin },
     { id: 'bookings', label: 'Bookings', icon: Calendar },
     { id: 'travelers', label: 'Nearby Travelers', icon: Users },
-    { id: 'blog', label: 'Blog', icon: BookOpen },
+
     { id: 'contact', label: 'Contact Us', icon: Phone },
-    { id: 'login', label: 'Login', icon: LogIn },
-    { id: 'signup', label: 'Sign Up', icon: UserPlus }
+   
   ];
 
-  const renderHome = () => (
-    <div className="space-y-8">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8">
-        <h1 className="text-4xl font-bold mb-4">Welcome to JournMate</h1>
-        <p className="text-xl mb-6">Find your perfect travel buddy and explore Nepal together!</p>
-        <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Start Your Journey
-        </button>
-      </div>
-      
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-          <MapPin className="w-12 h-12 text-blue-500 mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Discover Destinations</h3>
-          <p className="text-gray-600">Explore amazing places across Nepal</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-          <Users className="w-12 h-12 text-green-500 mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Find Travel Buddies</h3>
-          <p className="text-gray-600">Connect with like-minded travelers</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-          <Calendar className="w-12 h-12 text-purple-500 mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Plan Your Trip</h3>
-          <p className="text-gray-600">Book and organize your adventures</p>
-        </div>
-      </div>
-    </div>
-  );
+
+ 
 
   const renderDestinations = () => (
     <div className="space-y-6">
       <h2 className="text-3xl font-bold text-gray-800">Popular Destinations</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {destinations.map(destination => (
-          <div key={destination.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-            <img 
-              src={destination.image} 
-              alt={destination.name}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">{destination.name}</h3>
-              <p className="text-gray-600 mb-3">{destination.description}</p>
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span className="text-sm font-medium">{destination.rating}</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Users className="w-4 h-4 mr-1" />
-                  {destination.travelers} travelers
-                </div>
-              </div>
-              <button className="w-full mt-4 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                View Details
-              </button>
-            </div>
-          </div>
-        ))}
+         <div key={destination.id} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+  <img 
+    src={destination.image} 
+    alt={destination.name}
+    className="w-full h-48 object-cover"
+  />
+  <div className="p-4">
+    <h3 className="text-xl font-bold mb-1 text-gray-800">{destination.name}</h3>
+    <p className="text-gray-600 text-sm mb-3">{destination.description}</p>
+    <div className="flex justify-between items-center text-sm text-gray-500">
+      <div className="flex items-center">
+        <Star className="w-4 h-4 text-yellow-400 mr-1" />
+        {destination.rating}
+      </div>
+      <div className="flex items-center">
+        <Users className="w-4 h-4 mr-1" />
+        {destination.travelers} travelers
+      </div>
+    </div>
+    <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+      View Details
+    </button>
+  </div>
+</div>
+        )
+        )}
       </div>
     </div>
   );
@@ -282,13 +257,14 @@ const Dashboard = () => {
   );
 
   const renderTravelers = () => (
-    <div className="space-y-6">
+  <div className="w-full bg-blue-100 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       <h2 className="text-3xl font-bold text-gray-800">Nearby Travelers</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {nearbyTravelers.map(traveler => (
           <div key={traveler.id} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow cursor-pointer">
             <div className="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-              {traveler.avatar}
+              {traveler.name.charAt(0)}
             </div>
             <h3 className="font-semibold text-lg mb-1">{traveler.name}</h3>
             <p className="text-gray-600 text-sm mb-3">{traveler.location}</p>
@@ -306,12 +282,12 @@ const Dashboard = () => {
         ))}
       </div>
     </div>
-  );
+  </div>
+);
 
- 
-
-  const renderContact = () => (
-    <div className="space-y-6">
+const renderContact = () => (
+  <div className="w-full bg-blue-100 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       <h2 className="text-3xl font-bold text-gray-800">Contact Us</h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-white rounded-lg shadow-md p-6">
@@ -352,98 +328,29 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 
-  const renderLogin = () => (
-    <div className="max-w-md mx-auto">
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold text-center mb-6">Login to JournMate</h2>
-        <div className="space-y-4">
-          <input 
-            type="email" 
-            placeholder="Email Address" 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <input 
-            type="password" 
-            placeholder="Password" 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <button className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors">
-            Login
-          </button>
-        </div>
-        <p className="text-center mt-4 text-gray-600">
-          Don't have an account? 
-          <button 
-            onClick={() => setActiveSection('signup')}
-            className="text-blue-500 hover:text-blue-600 ml-1"
-          >
-            Sign up
-          </button>
-        </p>
-      </div>
-    </div>
-  );
+ 
 
-  const renderSignup = () => (
-    <div className="max-w-md mx-auto">
-      <div className="bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold text-center mb-6">Join JournMate</h2>
-        <div className="space-y-4">
-          <input 
-            type="text" 
-            placeholder="Full Name" 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <input 
-            type="email" 
-            placeholder="Email Address" 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <input 
-            type="password" 
-            placeholder="Password" 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <input 
-            type="password" 
-            placeholder="Confirm Password" 
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <button className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors">
-            Sign Up
-          </button>
-        </div>
-        <p className="text-center mt-4 text-gray-600">
-          Already have an account? 
-          <button 
-            onClick={() => setActiveSection('login')}
-            className="text-blue-500 hover:text-blue-600 ml-1"
-          >
-            Login
-          </button>
-        </p>
-      </div>
-    </div>
-  );
+ 
+  
 
   const renderContent = () => {
     switch(activeSection) {
-      case 'home': return renderHome();
+     
       case 'destinations': return renderDestinations();
       case 'bookings': return renderBookings();
       case 'travelers': return renderTravelers();
      
       case 'contact': return renderContact();
-      case 'login': return renderLogin();
-      case 'signup': return renderSignup();
-      default: return renderHome();
+      
+     
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-100">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -516,9 +423,20 @@ const Dashboard = () => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {renderContent()}
-      </main>
+      <main>
+  {/* Container for welcome and some sections */}
+  {(activeSection === 'home' || activeSection === 'destinations' || activeSection === 'bookings') && (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+      <DashboardWelcome />
+      {renderContent()}
+    </div>
+  )}
+
+  {/* Blue full-width sections */}
+  {(activeSection === 'travelers' || activeSection === 'contact') && renderContent()}
+</main>
+
+
     </div>
   );
 };

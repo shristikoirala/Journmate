@@ -30,7 +30,7 @@ export const blogPosts = [
     slug: 'solo-travel-safety-tips-nepal',
     author: 'Safety Guide',
     date: '2025-06-15',
-    image: '/images/Solo-Travel-in-Nepal.jpg',
+    image: '/images/solo travel in nepal.jpg',
     tags: ['Solo Travel', 'Safety', 'Adventure'],
     excerpt:
       'Traveling solo in Nepal can be both empowering and peaceful if you’re prepared...',

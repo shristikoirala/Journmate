@@ -4,6 +4,7 @@ const router = express.Router();
 console.log('✅ Inside destinations router');
 const Destination = require('../models/Destination');
 
+
 router.get('/', (req, res) => {
   console.log('GET /api/destinations hit');
   res.send('✅ Destinations route is working!');

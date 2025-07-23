@@ -5,8 +5,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About'; // Create this if needed
 import Dashboard from './pages/Dashboard';
-import BlogList from './pages/Blogs/BlogList';
-import BlogDetail from './pages/Blogs/BlogDetail';
+import BlogList from './pages/Blog/BlogList';
+import BlogDetail from './pages/Blog/BlogDetail';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 
