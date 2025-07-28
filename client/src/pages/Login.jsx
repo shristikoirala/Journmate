@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import{ MapPin } from "lucide-react";
 
 const Login = () => {
-  const [form, setForm] = useState({ email: '', password: '' });
+  const [form, setForm] = useState({ email: "", password: "" });
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,9 +15,18 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex  flex-col items-center justify-center bg-white">
+      <div className="text-center">
+        <Link href="/login">
+          <div className="flex items-center justify-center space-x-2 mb-6 cursor-pointer">
+            <MapPin className="h-10 w-10 text-primary" />
+            <span className="text-2xl font-bold text-gray-900">Journmate</span>
+          </div>
+        </Link>
+        <h2 className="text-3xl font-bold text-gray-900">Join Journmate</h2>
+        <p className="mt-2 text-gray-600">A Travel Buddy Finder</p>
+      </div>
       <div className="w-full max-w-sm p-6">
-        <h2 className="text-2xl font-bold mb-6">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">Email</label>
@@ -54,7 +64,7 @@ const Login = () => {
 
         <div className="mt-4 text-center">
           <p className="text-sm">
-            Don’t have an account?{' '}
+            Don’t have an account?{" "}
             <Link to="/register" className="text-blue-600 hover:underline">
               Register
             </Link>

@@ -482,6 +482,7 @@ const JournMate = () => {
               
               <Link to='/dashboard'>Dashboard</Link>    
             </button>
+            
 
             <button className='font-semibold transition-colors'>
                   <Link to='/blogs'>Blogs</Link>
